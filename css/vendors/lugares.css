@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,900');
+body {
+    /* font-family: 'Lato', sans-serif; */
+    background-image: url('../../assets/images/2-Guanajuato.jpg');
+}
+
+h1 {
+    color: white;
+    font-family: 'Noto Sans', sans-serif;
+    text-align: center;
+}
+
+span,
+h3 {
+    font-family: 'Lato', sans-serif;
+    color: white;
+}
+
+span {
+    display: block;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+    opacity: 0.9;
+}
+
+#color-azul {
+    background: #a200ff;
+    border: #e100ff;
+    padding: 5px;
+    position: absolute;
+    margin-top: 2vh;
+    width: 85%;
+    clear: both;
+    margin-left: 5%;
+    text-align: center;
+    font-size: 130%;
+}
+
+.list {
+    float: left;
+    margin-left: 3%;
+    margin-top: 5px;
+}
+
+.background-alpha {
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 10px;
+}
+
+@media (max-width: 900px) {
+    #right-panel {
+        width: 70%;
+    }
+    #map {    
+        width: 90%;
+    }
+}
+
+#ruta {
+    clear: both;
+}
+
+#map {
+    margin: 25px;
+    height: 80vh;
+    width: 70%;
+}
+
+#submit {
+    background: #a200ff;
+    border: #e100ff;
+    padding: 5px;
+    position: absolute;
+    margin-top: 2vh;
+    clear: both;
+    margin-left: 5%;
+    text-align: center;
+    font-size: 130%;
+    color: white;
+}
+
+#directions-panel {
+    margin-top: 50px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+}
+
+#start,
+#waypoints,
+#end {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+}

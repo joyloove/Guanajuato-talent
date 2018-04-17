@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Guanajuato</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/vendors/chat.css">
+</head>
+
+<body>
+
+
+
+
+
+
+
+    <div class="container text-center">
+        <h3></h3>
+        <br>
+        <div class="row">
+            <!-- Seccion de publicaciones -->
+            <div class="col-sm-6">
+                <h3>COMPARTE TUS EXPERIENCIAS!</h3>
+                <div class="panel panel-primary">
+                    <div class="panel-footer">
+                        <div class="input-group">
+                            <input id="mensaje" type="text" class="form-control input-sm" placeholder="Escribe un mensaje..." />
+                            <div class="">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-warning btn-sm btn-up" id="btnEnviar">Publicar!</button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <ul class="chat"></ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- template del item del chat (Oculto: para agarrar un clon y llenarlo e insertar en el chat)-->
+            <li style="display:none" id="plantilla" class="left clearfix">
+                <span class="chat-img pull-left">
+                    <img src="../assets/images/user.png" width="50" class="img-circle" />
+                </span>
+                <div class="chat-body clearfix">
+                    <div class="header">
+                        <strong class="primary-font nombre" style="text-transform:uppercase">Jack Sparrow</strong>
+                        <small class="pull-right text-muted">
+                            <span class="glyphicon glyphicon-asterisk tiempo">
+                            </span>
+                        </small>
+                    </div>
+                    <p class="mensaje">Mensaje</p>
+                </div>
+            </li>
+
+            <!-- Seccion de Sube tus Imagenes -->
+            <div class="col-sm-5">
+                <h3>PUBLICA TUS FOTOS</h3>
+                <form id="form-imagenes">
+                    <label class="btn btn-file">
+                        <input type="file" name="fichero" id="fichero" class="hidden">
+                        <img src="../assets/images/upload.png" width="100" alt="">
+                    </label>
+                </form>
+                <div class="cont-img">
+                    <div id="img-firebase"></div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyDG0j9kKtzv2QHxnraDSxpLGfpTu5QJr28",
+            authDomain: "talen-landbd.firebaseapp.com",
+            databaseURL: "https://talen-landbd.firebaseio.com",
+            projectId: "talen-landbd",
+            storageBucket: "talen-landbd.appspot.com",
+            messagingSenderId: "436807898216"
+        };
+        firebase.initializeApp(config);
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../js/vendors/app2.js"></script>
+    <script type="text/javascript" src="../js/vendors/post.js"></script>
+    <script type="text/javascript" src="../js/vendors/img.js"></script>
+</body>
+
+</html>
